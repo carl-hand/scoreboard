@@ -15,8 +15,14 @@ var Application = React.createClass({
           score: 23
       });
     },
-    
 
+    handleIncrement: function() {
+        var newScore = this.state.score + 1;
+        this.setState({
+            score: newScore
+        })
+    },
+    
     render: function() {
         return (
             <div>
@@ -27,7 +33,7 @@ var Application = React.createClass({
                 <div className="players">
                         <Player name={this.state.name} />
                     <div className="player-score">
-                        <Counter score={this.state.score} />
+                        <Counter score={this.state.score} onIncrement={this.handleIncrement}/>
                     </div>
                 </div>
             </div>

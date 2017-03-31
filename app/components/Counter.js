@@ -11,7 +11,7 @@ var Counter = React.createClass({
                 <div className="counter">
                     <button className="counter-action decrement"> - </button>
                     <div className="counter-score"> {this.props.score} </div>
-                    <button className="counter-action increment"> + </button>
+                    <button className="counter-action increment" onClick={this.props.onIncrement}> + </button>
                 </div>
             </div>
         );
@@ -20,6 +20,7 @@ var Counter = React.createClass({
 
 Counter.PropTypes = {
     score: React.PropTypes.number.isRequired,
+    onIncrement: React.PropTypes.func.isRequired
 };
 
 export default Counter;
