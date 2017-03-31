@@ -16,7 +16,10 @@ var Counter = React.createClass({
             </div>
         );
     }
-    
 });
+
+Counter.PropTypes = {
+    score: React.PropTypes.number.isRequired
+};
 
 export default Counter;

@@ -18,4 +18,8 @@ var Player = React.createClass({
     }
 });
 
+Player.PropTypes = {
+    name: React.PropTypes.string.isRequired
+};
+
 export default Player;
