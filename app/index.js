@@ -7,6 +7,7 @@ import ReactDOM from 'react-dom';
 require('./app.css');
 import Player from './components/Player'
 import Counter from './components/Counter'
+import AddButton from './components/Add'
 
 var Application = React.createClass({
     getInitialState: function () {
@@ -42,6 +43,7 @@ var Application = React.createClass({
                     <div className="player-score">
                         <Counter score={this.state.score} onIncrement={this.handleIncrement} onDecrement={this.handleDecrement}/>
                     </div>
+                    <AddButton />
                 </div>
             </div>
         );
