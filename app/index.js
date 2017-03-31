@@ -5,7 +5,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import css from './app.css';
 require('./app.css');
-import Player from './components/Player'
 
 var Application = React.createClass({
    

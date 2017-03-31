@@ -7,16 +7,10 @@ var Player = React.createClass({
 
     render: function() {
         return (
-            <div className="players">
+            <div>
                 <div className="player">
                     <div className="player-name">
                         Carl Hand
-                    </div>
-                </div>
-
-                <div className="player">
-                    <div className="player-name">
-                        Lee Hand
                     </div>
                 </div>
             </div>
