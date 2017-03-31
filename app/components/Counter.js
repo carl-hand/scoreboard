@@ -10,7 +10,7 @@ var Counter = React.createClass({
             <div>
                 <div className="counter">
                     <button className="counter-action decrement"> - </button>
-                    <div className="counter-score"> 31 </div>
+                    <div className="counter-score"> {this.props.score} </div>
                     <button className="counter-action increment"> + </button>
                 </div>
             </div>
@@ -19,7 +19,7 @@ var Counter = React.createClass({
 });
 
 Counter.PropTypes = {
-    score: React.PropTypes.number.isRequired
+    score: React.PropTypes.number.isRequired,
 };
 
 export default Counter;

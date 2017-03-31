@@ -10,7 +10,7 @@ var Player = React.createClass({
             <div>
                 <div className="player">
                     <div className="player-name">
-                        Carl Hand
+                        {this.props.name}
                     </div>
                 </div>
             </div>
