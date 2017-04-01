@@ -32,3 +32,8 @@ export default class AddButton extends React.Component {
         );
     }
 }
+
+AddButton.PropTypes = {
+    addPlayer: React.PropTypes.func.isRequired,
+    removePlayer: React.PropTypes.func.isRequired
+}
