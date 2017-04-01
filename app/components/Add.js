@@ -9,7 +9,8 @@ var AddButton = React.createClass({
     render: function() {
         return (
             <div>
-                <input type="submit" value="Submit" onClick={this.props.addPlayer} />
+                <input type="submit" value="Add Player" onClick={this.props.addPlayer} />
+                <input type="submit" value="Remove Player" onClick={this.props.removePlayer} />
             </div>
         );
     }

@@ -51,6 +51,12 @@ var Application = React.createClass({
         });
         this.setState({Players: Players});
     },
+    
+    onRemove: function () {
+      const Players = this.state.Players;
+        Players.splice(0, 1);
+        this.setState({Players: Players});
+    },
 
     render: function() {
         return (
@@ -63,7 +69,7 @@ var Application = React.createClass({
                     {this.state.Players.map((player, index) => {
                         return <Player name={player.name} key={index} score={player.score} onIncrement={this.handleIncrement(index, 1)} />
                     })}
-                    <AddButton addPlayer={this.onAdd} />
+                    <AddButton addPlayer={this.onAdd} removePlayer={this.onRemove} />
 
                 </div>
             </div>
