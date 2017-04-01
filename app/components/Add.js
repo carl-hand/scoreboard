@@ -20,6 +20,7 @@ export default class AddButton extends React.Component {
 
     handleAdd() {
         this.props.addPlayer(this.state.name);
+        this.setState({name: ""});
     }
     
     handleRemove() {

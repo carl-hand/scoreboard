@@ -66,6 +66,9 @@ var Application = React.createClass({
             if (player.name === name) {
                 Players.splice(index, 1);
             }
+            else if (name === "") {
+                console.log("Please enter a name");
+            }
             else {
                 console.log(name + " does not exist");
             }
