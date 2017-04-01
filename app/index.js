@@ -44,11 +44,16 @@ var Application = React.createClass({
 
     onAdd: function (newName) {
         const Players = this.state.Players;
-        Players.push({
-            name: newName,
-            score: 0,
-            id: this.state.nextId
-        });
+        if (newName === "") {
+            console.log("Please enter a name");
+        }
+        else {
+            Players.push({
+                name: newName,
+                score: 0,
+                id: this.state.nextId
+            });
+        }
         this.state.nextId++;
         this.setState({
             Players: Players
