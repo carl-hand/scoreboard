@@ -6,9 +6,7 @@ import React from 'react';
 var AddButton = React.createClass({
 
     getInitialState: function() {
-        return (
-        {name: ""}
-        );
+        return ({name: ""});
     },
     
     handleAdd: function() {

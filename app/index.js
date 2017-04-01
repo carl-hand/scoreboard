@@ -31,12 +31,8 @@ var Application = React.createClass({
     },
 
     handleIncrement: function(index, delta) {
-        // this.setState({
-        //     Players: update(this.state.Players, {0: {score: {$set: this.state.Players[0].score + 1}}})
-        // });
         const Players = this.state.Players;
-        {Players[index].score += delta};
-        // this.setState({Players: Players});
+        Players[index].score += delta;
     },
 
     handleDecrement: function () {
@@ -54,13 +50,17 @@ var Application = React.createClass({
             id: this.state.nextId
         });
         this.state.nextId++;
-        this.setState({Players: Players});
+        this.setState({
+            Players: Players
+        });
     },
     
     onRemove: function () {
       const Players = this.state.Players;
         Players.splice(0, 1);
-        this.setState({Players: Players});
+        this.setState({
+            Players: Players
+        });
     },
 
     render: function() {
