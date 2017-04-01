@@ -7,7 +7,11 @@ export default class AddButton extends React.Component {
 
     constructor() {
         super();
-        this.state = {name: ""};
+        this.state = {
+            name: "",
+            addButtonName: "Add Player",
+            removeButtonName: "Remove Player"
+        };
     }
 
     handleChange(e) {
@@ -26,8 +30,8 @@ export default class AddButton extends React.Component {
         return (
             <div>
                 <input type="text" value={this.state.name} onChange={this.handleChange.bind(this)}/>
-                <input type="submit" value="Add Player" onClick={this.handleAdd.bind(this)}/>
-                <input type="submit" value="Remove Player" onClick={this.handleRemove.bind(this)}/>
+                <input type="submit" value={this.state.addButtonName} onClick={this.handleAdd.bind(this)}/>
+                <input type="submit" value={this.state.removeButtonName} onClick={this.handleRemove.bind(this)}/>
             </div>
         );
     }

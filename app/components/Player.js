@@ -3,9 +3,14 @@
  */
 import React from 'react';
 
-var Player = React.createClass({
+export default class Player extends React.Component {
 
-    render: function() {
+    constructor() {
+        super();
+
+    }
+
+    render() {
         return (
             <div>
                 <div className="player">
@@ -21,7 +26,7 @@ var Player = React.createClass({
             </div>
         );
     }
-});
+}
 
 Player.PropTypes = {
     name: React.PropTypes.string.isRequired,
@@ -29,5 +34,3 @@ Player.PropTypes = {
     onIncrement: React.PropTypes.func.isRequired,
     // onDecrement: React.PropTypes.func.isRequired
 };
-
-export default Player;
