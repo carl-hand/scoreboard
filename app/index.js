@@ -13,14 +13,17 @@ import update from 'immutability-helper';
 var Application = React.createClass({
     getInitialState: function () {
       return ({
+          nextId: 2,
           Players: [
               {
                   name: "Carl",
                   score: 23,
+                  id: 0
               },
               {
                   name: "Lee",
                   score: 20,
+                  id: 1
               }
           ],
           title: 'Scoreboard'
@@ -48,7 +51,9 @@ var Application = React.createClass({
         Players.push({
             name: "Paul",
             score: 22,
+            id: this.state.nextId
         });
+        this.state.nextId++;
         this.setState({Players: Players});
     },
     
