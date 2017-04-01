@@ -10,6 +10,10 @@ export default class Player extends React.Component {
 
     }
 
+    incrementScore() {
+        this.props.onIncrement(this.props.id, 1);
+    }
+    
     render() {
         return (
             <div>
@@ -20,7 +24,7 @@ export default class Player extends React.Component {
                     <div className="counter">
                         <button className="counter-action decrement" onClick={this.props.onDecrement}> - </button>
                         <div className="counter-score"> {this.props.score} </div>
-                        <button className="counter-action increment" onClick={this.props.onIncrement}> + </button>
+                        <button className="counter-action increment" onClick={this.incrementScore.bind(this)}> + </button>
                     </div>
                 </div>
             </div>
