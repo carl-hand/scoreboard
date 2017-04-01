@@ -55,14 +55,14 @@ var Application = React.createClass({
         });
     },
     
-    onRemove: function (type) {
+    onRemove: function (name) {
       const Players = this.state.Players;
         this.state.Players.map(function (player, index) {
-            if (player.name === type) {
+            if (player.name === name) {
                 Players.splice(index, 1);
             }
             else {
-                console.log("Player does not exist");
+                console.log(name + " does not exist");
             }
         });
         this.setState({

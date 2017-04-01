@@ -24,6 +24,7 @@ export default class AddButton extends React.Component {
     
     handleRemove() {
         this.props.removePlayer(this.state.name);
+        this.setState({name: ""});
     }
 
     render() {
