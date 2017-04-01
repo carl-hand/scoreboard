@@ -33,11 +33,14 @@ var Application = React.createClass({
     handleIncrement: function(index, delta) {
         const Players = this.state.Players;
         var newScore = Players[index].score += delta;
-        this.setState({score: newScore});
+        this.setState({
+            score: newScore
+        });
     },
 
-    handleDecrement: function () {
-      var newScore = this.state.Players.score - 1;
+    handleDecrement: function (index, delta) {
+        const Players = this.state.Players;
+        var newScore = Players[index].score -= delta;
         this.setState({
             score: newScore
         });
@@ -88,7 +91,7 @@ var Application = React.createClass({
 
                 <div className="players">
                     {this.state.Players.map((player, index) => {
-                        return <Player id={player.id} name={player.name} key={index} score={player.score} onIncrement={this.handleIncrement}/>
+                        return <Player id={player.id} name={player.name} key={index} score={player.score} onIncrement={this.handleIncrement} onDecrement={this.handleDecrement} />
                     })}
                     <AddButton addPlayer={this.onAdd} removePlayer={this.onRemove} />
 
