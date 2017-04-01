@@ -12,6 +12,11 @@ var Player = React.createClass({
                     <div className="player-name">
                         {this.props.name}
                     </div>
+                    <div className="counter">
+                        <button className="counter-action decrement" onClick={this.props.onDecrement}> - </button>
+                        <div className="counter-score"> {this.props.score} </div>
+                        <button className="counter-action increment" onClick={this.props.onIncrement}> + </button>
+                    </div>
                 </div>
             </div>
         );
@@ -19,7 +24,10 @@ var Player = React.createClass({
 });
 
 Player.PropTypes = {
-    name: React.PropTypes.string.isRequired
+    name: React.PropTypes.string.isRequired,
+    score: React.PropTypes.number.isRequired,
+    onIncrement: React.PropTypes.func.isRequired,
+    // onDecrement: React.PropTypes.func.isRequired
 };
 
 export default Player;

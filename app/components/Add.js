@@ -4,17 +4,12 @@
 import React from 'react';
 
 var AddButton = React.createClass({
-   
+
+    
     render: function() {
         return (
             <div>
-                <form className="add-player-form">
-                    <label>
-                        Name:
-                        <input type="text" name="name" />
-                    </label>
-                    <input type="submit" value="Submit" />
-                </form>
+                <input type="submit" value="Submit" onClick={this.props.addPlayer} />
             </div>
         );
     }
