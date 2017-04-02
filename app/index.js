@@ -57,8 +57,8 @@ var Application = React.createClass({
                 score: 0,
                 id: this.state.nextId
             });
+            this.state.nextId++;
         }
-        this.state.nextId++;
         this.setState({
             Players: Players
         });
