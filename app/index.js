@@ -18,12 +18,10 @@ var Application = React.createClass({
               {
                   name: "Carl",
                   score: 23,
-                  id: 0
               },
               {
                   name: "Lee",
                   score: 20,
-                  id: 1
               }
           ],
           title: 'Scoreboard'
@@ -31,7 +29,7 @@ var Application = React.createClass({
     },
 
     handleIncrement: function(index, delta) {
-        const Players = this.state.Players;
+        var Players = this.state.Players;
         var newScore = Players[index].score += delta;
         this.setState({
             score: newScore
@@ -39,7 +37,7 @@ var Application = React.createClass({
     },
 
     handleDecrement: function (index, delta) {
-        const Players = this.state.Players;
+        var Players = this.state.Players;
         var newScore = Players[index].score -= delta;
         this.setState({
             score: newScore
@@ -47,7 +45,7 @@ var Application = React.createClass({
     },
 
     onAdd: function (newName) {
-        const Players = this.state.Players;
+        var Players = this.state.Players;
         if (newName === "") {
             console.log("Please enter a name");
         }
@@ -65,8 +63,8 @@ var Application = React.createClass({
     },
     
     onRemove: function (name) {
-      const Players = this.state.Players;
-        this.state.Players.map(function (player, index) {
+      var Players = this.state.Players;
+        Players.map(function (player, index) {
             if (player.name === name) {
                 Players.splice(index, 1);
             }
@@ -91,7 +89,7 @@ var Application = React.createClass({
 
                 <div className="players">
                     {this.state.Players.map((player, index) => {
-                        return <Player id={player.id} name={player.name} key={index} score={player.score} onIncrement={this.handleIncrement} onDecrement={this.handleDecrement} />
+                        return <Player id={index} name={player.name} key={index} score={player.score} onIncrement={this.handleIncrement} onDecrement={this.handleDecrement} />
                     })}
                     <AddButton addPlayer={this.onAdd} removePlayer={this.onRemove} />
 
