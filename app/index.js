@@ -8,7 +8,9 @@ require('./app.css');
 import Player from './components/Player'
 import Counter from './components/Counter'
 import AddButton from './components/Add'
+import Stopwatch from './components/Stopwatch'
 import update from 'immutability-helper';
+
 
 var Application = React.createClass({
     getInitialState: function () {
@@ -83,14 +85,8 @@ var Application = React.createClass({
     render: function() {
         return (
             <div>
-                <div className="stopwatch">
-                    <div className="stopwatch-time">
-                        20:00
-                    </div>
-                    <button>Start</button>
-                    <button>Reset</button>
-                </div>
-
+                <Stopwatch />
+                
                 <div className="header">
                     <h1>{this.state.title}</h1>
                 </div>
