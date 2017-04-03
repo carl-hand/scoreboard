@@ -13,7 +13,7 @@ var Stopwatch = React.createClass({
                         {this.props.time}
                     </div>
                     <button onClick={this.props.start}>Start</button>
-                    <button>Reset</button>
+                    <button onClick={this.props.reset}>Reset</button>
                 </div>
             </div>
         );
