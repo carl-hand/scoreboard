@@ -19,15 +19,15 @@ var Application = React.createClass({
           Players: [
               {
                   name: "Carl",
-                  score: 23,
+                  score: 0,
               },
               {
                   name: "Lee",
-                  score: 20,
+                  score: 0,
               }
           ],
           title: "Scoreboard",
-          time: 5,
+          time: 20,
           startInterval: ""
       });
     },
@@ -39,9 +39,13 @@ var Application = React.createClass({
             score: newScore
         });
 
-        if (newScore >= 30) {
+        if (newScore >= 5) {
             alert(Players[index].name + " is the winner");
-            this.replaceState(this.getInitialState());
+            clearInterval(this.state.startInterval);
+            //TODO: find a way to keep "time" immutable
+            this.setState({
+                time: 20
+            });
         }
     },
 
@@ -112,10 +116,11 @@ var Application = React.createClass({
     },
 
     resetGame: function() {
-        this.setState({
-            time: 5
-        });
         clearInterval(this.state.startInterval);
+        //TODO: find a way to keep "time" immutable
+        this.setState({
+            time: 20
+        });
     },
 
     render: function() {
