@@ -4,20 +4,29 @@
 import React from 'react'
 
 var Stopwatch = React.createClass({
-    getInitalState: function() {
+    getInitialState: function() {
       return ({
-          time: 0
+          time: 20
       });
     },
-    
+
+    startGame: function() {
+        // setTimeout();
+        var newTime = time;
+        newTime--;
+        this.setState({
+            time: newTime
+        });
+    },
+
     render: function() {
         return (
             <div>
                 <div className="stopwatch">
                     <div className="stopwatch-time">
-                       20:00
+                        {this.state.time}
                     </div>
-                    <button>Start</button>
+                    <button onClick={this.startGame}>Start</button>
                     <button>Reset</button>
                 </div>
             </div>
