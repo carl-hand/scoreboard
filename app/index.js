@@ -27,7 +27,7 @@ var Application = React.createClass({
               }
           ],
           title: "Scoreboard",
-          time: 20,
+          time: 5,
           startInterval: ""
       });
     },
@@ -38,6 +38,7 @@ var Application = React.createClass({
         this.setState({
             score: newScore
         });
+
         if (newScore >= 30) {
             alert(Players[index].name + " is the winner");
             this.replaceState(this.getInitialState());
@@ -65,6 +66,7 @@ var Application = React.createClass({
             });
             this.state.nextId++;
         }
+
         this.setState({
             Players: Players
         });
@@ -73,6 +75,7 @@ var Application = React.createClass({
     onRemove: function (name) {
       var Players = this.state.Players;
         Players.map(function (player, index) {
+
             if (player.name === name) {
                 Players.splice(index, 1);
             }
@@ -83,6 +86,7 @@ var Application = React.createClass({
                 console.log(name + " does not exist");
             }
         });
+
         this.setState({
             Players: Players
         });
@@ -99,19 +103,19 @@ var Application = React.createClass({
             else {
                 alert("GAME OVER");
                 clearInterval(intervalID);
-                this.setState({
-                    time: 0
-                });
-                this.replaceState(this.getInitialState());
             }
         }.bind(this), 1000);
+
+        this.setState({
+            startInterval: intervalID
+        });
     },
 
     resetGame: function() {
-        setInterval(function() {
-            clearInterval(this.state.startInterval);
-        }.bind(this), 0);
-        this.replaceState(this.getInitialState());
+        this.setState({
+            time: 5
+        });
+        clearInterval(this.state.startInterval);
     },
 
     render: function() {
