@@ -26,7 +26,8 @@ var Application = React.createClass({
                   score: 20,
               }
           ],
-          title: 'Scoreboard'
+          title: 'Scoreboard',
+          time: 20
       });
     },
 
@@ -82,10 +83,27 @@ var Application = React.createClass({
         });
     },
 
+    startGame: function() {
+        var intervalID = setInterval(function() {
+            if (this.state.time > 0) {
+                this.setState({
+                    time: this.state.time - 1
+                });
+            }
+            else {
+                alert("GAME OVER");
+                clearInterval(intervalID);
+                this.setState({
+                    time: 0
+                });
+            }
+        }.bind(this), 1000);
+    },
+    
     render: function() {
         return (
             <div>
-                <Stopwatch />
+                <Stopwatch start={this.startGame} time={this.state.time}/>
                 
                 <div className="header">
                     <h1>{this.state.title}</h1>
