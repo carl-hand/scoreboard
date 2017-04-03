@@ -38,6 +38,10 @@ var Application = React.createClass({
         this.setState({
             score: newScore
         });
+        if (newScore >= 30) {
+            alert(Players[index].name + " is the winner");
+            this.replaceState(this.getInitialState());
+        }
     },
 
     handleDecrement: function (index, delta) {
@@ -86,9 +90,10 @@ var Application = React.createClass({
 
     startGame: function() {
         var intervalID = setInterval(function() {
-            if (this.state.time > 0) {
+            var newTime = this.state.time;
+            if (newTime > 0) {
                 this.setState({
-                    time: this.state.time - 1
+                    time: newTime - 1
                 });
             }
             else {
@@ -97,20 +102,16 @@ var Application = React.createClass({
                 this.setState({
                     time: 0
                 });
+                this.replaceState(this.getInitialState());
             }
         }.bind(this), 1000);
-        this.setState({
-            startInterval: intervalID
-        });
     },
 
     resetGame: function() {
         setInterval(function() {
-            this.setState({
-                time: 20
-            });
             clearInterval(this.state.startInterval);
         }.bind(this), 0);
+        this.replaceState(this.getInitialState());
     },
 
     render: function() {
