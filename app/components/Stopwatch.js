@@ -11,12 +11,20 @@ var Stopwatch = React.createClass({
     },
 
     startGame: function() {
-        // setTimeout();
-        var newTime = time;
-        newTime--;
-        this.setState({
-            time: newTime
-        });
+        var intervalID = setInterval(function() {
+            if (this.state.time > 0) {
+                this.setState({
+                    time: this.state.time - 1
+                });
+            }
+            else {
+                alert("GAME OVER");
+                clearInterval(intervalID);
+                this.setState({
+                    time: 0
+                });
+            }
+        }.bind(this), 1000);
     },
 
     render: function() {
