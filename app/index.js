@@ -83,6 +83,14 @@ var Application = React.createClass({
     render: function() {
         return (
             <div>
+                <div className="stopwatch">
+                    <div className="stopwatch-time">
+                        20:00
+                    </div>
+                    <button>Start</button>
+                    <button>Reset</button>
+                </div>
+
                 <div className="header">
                     <h1>{this.state.title}</h1>
                 </div>

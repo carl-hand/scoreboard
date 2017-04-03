@@ -55,14 +55,16 @@ body {
 
 .stopwatch {
   padding: 15px 10px 5px 10px;
-  margin: -5px -10px -5px 10px;
+  margin: -5px 1px -5px 4px;
   background: #2f2f2f;
   border-radius: 0 15px 0 0;
+  text-align: right;
 }
 
   .stopwatch-time {
     font-family: monospace;
     font-size: 2em;
+    padding-right: 34px;
   }
 
   .stopwatch button {
