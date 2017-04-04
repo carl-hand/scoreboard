@@ -35,12 +35,13 @@ var Application = React.createClass({
         var Players = this.state.Players.concat();
         Players[index].score += delta;
         var newScore = Players[index].score;
-        console.log("newScore before: " + newScore);
+
         this.setState({
             Players: Players
         });
-        console.log("Player[" + index + "] score after: " + Players[index].score);
-
+        console.log("INCREMENT:");
+        console.log("Player score is: " + Players[index].score);
+        console.log("Initial Player[" + index + "] state score: " + this.getInitialState().Players[index].score);
         if (newScore >= 5) {
             alert(Players[index].name + " is the winner");
             clearInterval(this.state.startInterval);
@@ -54,11 +55,15 @@ var Application = React.createClass({
         var Players = this.state.Players.concat();
         Players[index].score -= delta;
         var newScore = Players[index].score;
+
         if (newScore >= 0) {
             newScore--;
             this.setState({
                 score: newScore
             });
+            console.log("Decrement:");
+            console.log("Player score is: " + Players[index].score);
+            console.log("Initial Player[" + index + "] state score: " + this.getInitialState().Players[index].score);
         }
     },
 
