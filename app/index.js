@@ -32,16 +32,18 @@ var Application = React.createClass({
     },
 
     handleIncrement: function(index, delta) {
-        var Players = this.state.Players;
-        var newScore = Players[index].score += delta;
+        var Players = this.state.Players.concat();
+        Players[index].score += delta;
+        var newScore = Players[index].score;
+        console.log("newScore before: " + newScore);
         this.setState({
-            score: newScore
+            Players: Players
         });
+        console.log("Player[" + index + "] score after: " + Players[index].score);
 
         if (newScore >= 5) {
             alert(Players[index].name + " is the winner");
             clearInterval(this.state.startInterval);
-            //TODO: find a way to keep "time" immutable
             this.setState({
                 time: 20
             });
@@ -49,15 +51,19 @@ var Application = React.createClass({
     },
 
     handleDecrement: function (index, delta) {
-        var Players = this.state.Players;
-        var newScore = Players[index].score -= delta;
-        this.setState({
-            score: newScore
-        });
+        var Players = this.state.Players.concat();
+        Players[index].score -= delta;
+        var newScore = Players[index].score;
+        if (newScore >= 0) {
+            newScore--;
+            this.setState({
+                score: newScore
+            });
+        }
     },
 
     onAdd: function (newName) {
-        var Players = this.state.Players;
+        var Players = this.state.Players.concat();
         if (newName === "") {
             console.log("Please enter a name");
         }
@@ -74,7 +80,7 @@ var Application = React.createClass({
     },
     
     onRemove: function (name) {
-      var Players = this.state.Players;
+      var Players = this.state.Players.concat();
         Players.map(function (player, index) {
 
             if (player.name === name) {
@@ -114,7 +120,6 @@ var Application = React.createClass({
 
     resetGame: function() {
         clearInterval(this.state.startInterval);
-        //TODO: find a way to keep "time" immutable
         this.setState({
             time: 20
         });
