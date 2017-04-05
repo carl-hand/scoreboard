@@ -33,12 +33,8 @@ var Application = React.createClass({
 
     handleIncrement: function(index, delta) {
         var Players = this.state.Players.concat();
-        Players[index].score += delta;
-        var newScore = Players[index].score;
+        var newScore = Players[index].score += delta;
 
-        // this.setState({
-        //     Players: Players
-        // });
         this.setState({
             score: newScore
         });
@@ -59,12 +55,11 @@ var Application = React.createClass({
     },
 
     handleDecrement: function (index, delta) {
-        var Players = this.state.Players.concat();
-        Players[index].score -= delta;
+        var Players = [...this.state.Players];
         var newScore = Players[index].score;
 
-        if (newScore >= 0) {
-            newScore--;
+        if (newScore > 0) {
+            newScore = Players[index].score -= delta;
             this.setState({
                 score: newScore
             });
@@ -74,12 +69,10 @@ var Application = React.createClass({
     },
 
     onAdd: function (newName) {
-        // var Players = this.state.Players.concat();
         // var Players = Object.assign([], this.state.Players, {name: newName, score: 0});
 
         // copying the contents of our state but this.state.Players will remain the same
         var Players = [...this.state.Players];
-        // setState({data: new Immutable.Record()})
 
         if (newName === "") {
             console.log("Please enter a name");
@@ -93,9 +86,6 @@ var Application = React.createClass({
 
         this.setState({
             Players: Players
-        });
-        Players.map((player) => {
-            console.log(player.name + " " + player.score);
         });
     },
     
@@ -146,8 +136,8 @@ var Application = React.createClass({
     },
 
     checkState: function() {
-        console.log("CHECKING INITIAL STATE...");
-        this.getInitialState().Players.map((player, index) => {
+        console.log("CHECKING STATE...");
+        this.state.Players.map((player) => {
             console.log(player.name + " " + player.score);
         });
     },
