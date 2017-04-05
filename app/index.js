@@ -48,7 +48,7 @@ var Application = React.createClass({
         this.state.Players.map((player) => {
             console.log(player.name + " " + player.score);
         });
-        
+
         if (newScore >= 5) {
             alert(Players[index].name + " is the winner");
             clearInterval(this.state.startInterval);
@@ -77,8 +77,10 @@ var Application = React.createClass({
         // var Players = this.state.Players.concat();
         // var Players = Object.assign([], this.state.Players, {name: newName, score: 0});
 
-        // copying the contents of our state but this.state.players will remain as is
+        // copying the contents of our state but this.state.Players will remain the same
         var Players = [...this.state.Players];
+        // setState({data: new Immutable.Record()})
+
         if (newName === "") {
             console.log("Please enter a name");
         }
@@ -144,8 +146,8 @@ var Application = React.createClass({
     },
 
     checkState: function() {
-        console.log("CHECKING STATE...");
-        this.state.Players.map((player) => {
+        console.log("CHECKING INITIAL STATE...");
+        this.getInitialState().Players.map((player, index) => {
             console.log(player.name + " " + player.score);
         });
     },
