@@ -36,12 +36,19 @@ var Application = React.createClass({
         Players[index].score += delta;
         var newScore = Players[index].score;
 
+        // this.setState({
+        //     Players: Players
+        // });
         this.setState({
-            Players: Players
+            score: newScore
         });
+
         console.log("INCREMENT:");
-        console.log("Player score is: " + Players[index].score);
-        console.log("Initial Player[" + index + "] state score: " + this.getInitialState().Players[index].score);
+        console.log("Player " + Players[index].name + " score is: " + Players[index].score);
+        this.state.Players.map((player) => {
+            console.log(player.name + " " + player.score);
+        });
+        
         if (newScore >= 5) {
             alert(Players[index].name + " is the winner");
             clearInterval(this.state.startInterval);
@@ -63,24 +70,30 @@ var Application = React.createClass({
             });
             console.log("Decrement:");
             console.log("Player score is: " + Players[index].score);
-            console.log("Initial Player[" + index + "] state score: " + this.getInitialState().Players[index].score);
         }
     },
 
     onAdd: function (newName) {
-        var Players = this.state.Players.concat();
+        // var Players = this.state.Players.concat();
+        // var Players = Object.assign([], this.state.Players, {name: newName, score: 0});
+
+        // copying the contents of our state but this.state.players will remain as is
+        var Players = [...this.state.Players];
         if (newName === "") {
             console.log("Please enter a name");
         }
         else {
             Players.push({
                 name: newName,
-                score: 0,
+                score: 0
             });
         }
 
         this.setState({
             Players: Players
+        });
+        Players.map((player) => {
+            console.log(player.name + " " + player.score);
         });
     },
     
@@ -130,6 +143,13 @@ var Application = React.createClass({
         });
     },
 
+    checkState: function() {
+        console.log("CHECKING STATE...");
+        this.state.Players.map((player) => {
+            console.log(player.name + " " + player.score);
+        });
+    },
+
     render: function() {
         return (
             <div>
@@ -144,7 +164,7 @@ var Application = React.createClass({
                         return <Player id={index} name={player.name} key={index} score={player.score} onIncrement={this.handleIncrement} onDecrement={this.handleDecrement} />
                     })}
                     <AddButton addPlayer={this.onAdd} removePlayer={this.onRemove} />
-
+                    <button onClick={this.checkState}>Check state</button>
                 </div>
             </div>
         );
