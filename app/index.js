@@ -111,7 +111,7 @@ var Application = React.createClass({
     },
 
     startGame: function() {
-        var intervalID = setInterval(function() {
+        // var intervalID = setInterval(function () {
             var newTime = this.state.time;
             if (newTime > 0) {
                 this.setState({
@@ -122,15 +122,22 @@ var Application = React.createClass({
                 alert("GAME OVER");
                 clearInterval(intervalID);
             }
-        }.bind(this), 1000);
+            console.log("INTERVAL ID: " + this.state.startInterval);
+        // }.bind(this), 1000);
+        // this.setState({
+        //     startInterval: intervalID
+        // });
+    },
 
-        this.setState({
-            startInterval: intervalID
-        });
+    componentDidMount: function () {
+        this.state.startInterval = setInterval(this.startGame, 1000);
+        // this.startGame();
     },
 
     resetGame: function() {
+        console.log(this.state.startInterval);
         clearInterval(this.state.startInterval);
+        console.log(this.state.startInterval);
         this.setState({
             time: 20
         });
@@ -146,7 +153,7 @@ var Application = React.createClass({
     render: function() {
         return (
             <div>
-                <Stopwatch start={this.startGame} reset={this.resetGame} time={this.state.time}/>
+                <Stopwatch reset={this.resetGame} time={this.state.time}/>
                 
                 <div className="header">
                     <h1>{this.state.title}</h1>
