@@ -90,7 +90,7 @@ var Application = React.createClass({
     },
     
     onRemove: function (name) {
-      var Players = this.state.Players.concat();
+      var Players = [...this.state.Players];
         Players.map(function (player, index) {
 
             if (player.name === name) {
