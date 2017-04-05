@@ -32,7 +32,7 @@ var Application = React.createClass({
     },
 
     handleIncrement: function(index, delta) {
-        var Players = this.state.Players.concat();
+        var Players = [...this.state.Players];
         var newScore = Players[index].score += delta;
 
         this.setState({
@@ -51,6 +51,7 @@ var Application = React.createClass({
             this.setState({
                 time: 20
             });
+
         }
     },
 
