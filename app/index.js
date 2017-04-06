@@ -9,7 +9,7 @@ import Player from './components/Player'
 import Counter from './components/Counter'
 import AddButton from './components/Add'
 import Stopwatch from './components/Stopwatch'
-import update from 'immutability-helper';
+// import update from 'immutability-helper';
 
 
 var Application = React.createClass({
