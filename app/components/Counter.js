@@ -3,20 +3,18 @@
  */
 import React from 'react';
 
-var Counter = React.createClass({
-   
-    render: function() {
-        return (
-            <div>
-                <div className="counter">
-                    <button className="counter-action decrement" onClick={this.props.onDecrement}> - </button>
-                    <div className="counter-score"> {this.props.score} </div>
-                    <button className="counter-action increment" onClick={this.props.onIncrement}> + </button>
-                </div>
+var Counter = () => {
+
+    return (
+        <div>
+            <div className="counter">
+                <button className="counter-action decrement" onClick={this.props.onDecrement}> - </button>
+                <div className="counter-score"> {this.props.score} </div>
+                <button className="counter-action increment" onClick={this.props.onIncrement}> + </button>
             </div>
-        );
-    }
-});
+        </div>
+    );
+};
 
 Counter.PropTypes = {
     score: React.PropTypes.number.isRequired,

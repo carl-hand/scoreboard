@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc22e2a9-4a52-4cf6-8a82-f859d1b1fb98" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/Player.js" afterPath="$PROJECT_DIR$/app/components/Player.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/Stopwatch.js" afterPath="$PROJECT_DIR$/app/components/Stopwatch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/Counter.js" afterPath="$PROJECT_DIR$/app/components/Counter.js" />
     </list>
     <ignored path="scoreboard.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,11 +63,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Counter.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Counter.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/components/Counter.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+                <state relative-caret-position="391">
+                  <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -108,7 +106,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Stopwatch.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Stopwatch.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/components/Stopwatch.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="68">
@@ -162,11 +160,11 @@
         <option value="$PROJECT_DIR$/app/app.css" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
-        <option value="$PROJECT_DIR$/app/components/Counter.js" />
         <option value="$PROJECT_DIR$/app/components/Add.js" />
         <option value="$PROJECT_DIR$/app/index.js" />
         <option value="$PROJECT_DIR$/app/components/Player.js" />
         <option value="$PROJECT_DIR$/app/components/Stopwatch.js" />
+        <option value="$PROJECT_DIR$/app/components/Counter.js" />
       </list>
     </option>
   </component>
@@ -671,12 +669,12 @@
       <workItem from="1491467445592" duration="1752000" />
       <workItem from="1491495670238" duration="2221000" />
       <workItem from="1491884322721" duration="2980000" />
-      <workItem from="1491910769486" duration="1566000" />
+      <workItem from="1491910769486" duration="1639000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94202000" />
+    <option name="totallyTimeSpent" value="94275000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-247" y="-1177" width="1911" height="1177" extended-state="6" />
@@ -1062,14 +1060,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/Counter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/Stopwatch.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1077,6 +1067,14 @@
           <folding>
             <marker date="1491913574000" expanded="true" signature="454:468" ph="&lt;xml/&gt;" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/Counter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
