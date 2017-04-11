@@ -17,7 +17,7 @@ export default class Player extends React.Component {
     decrementScore() {
         this.props.onDecrement(this.props.id, 1);
     }
-    
+
     render() {
         return (
             <div>
@@ -35,6 +35,7 @@ export default class Player extends React.Component {
         );
     }
 }
+    
 
 Player.PropTypes = {
     name: React.PropTypes.string.isRequired,
