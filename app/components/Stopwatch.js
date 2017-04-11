@@ -3,7 +3,7 @@
  */
 import React, { Component, PropTypes } from 'react'
 
-var Stopwatch =  () => {
+const Stopwatch =  () => {
 
     return (
         <div>

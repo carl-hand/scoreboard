@@ -3,7 +3,7 @@
  */
 import React from 'react';
 
-var Counter = () => {
+const Counter = () => {
 
     return (
         <div>
