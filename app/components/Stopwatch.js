@@ -3,16 +3,16 @@
  */
 import React, { Component, PropTypes } from 'react'
 
-const Stopwatch =  () => {
+const Stopwatch =  (props) => {
 
     return (
         <div>
             <div className="stopwatch">
                 <div className="stopwatch-time">
-                    {this.props.time}
+                    {props.time}
                 </div>
-                <button onClick={this.props.start}>Start</button>
-                <button onClick={this.props.reset}>Reset</button>
+                <button onClick={props.start}>Start</button>
+                <button onClick={props.reset}>Reset</button>
             </div>
         </div>
     );
