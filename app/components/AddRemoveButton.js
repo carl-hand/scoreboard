@@ -3,7 +3,7 @@
  */
 import React from 'react';
 
-export default class AddButton extends React.Component {
+export default class AddRemoveButton extends React.Component {
 
     constructor() {
         super();
@@ -39,7 +39,7 @@ export default class AddButton extends React.Component {
     }
 }
 
-AddButton.PropTypes = {
+AddRemoveButton.PropTypes = {
     addPlayer: React.PropTypes.func.isRequired,
     removePlayer: React.PropTypes.func.isRequired
 }

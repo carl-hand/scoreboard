@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom';
 require('./app.css');
 import Player from './components/Player'
 import Counter from './components/Counter'
-import AddButton from './components/Add'
+import AddRemoveButton from './components/AddRemoveButton'
 import Stopwatch from './components/Stopwatch'
 // import update from 'immutability-helper';
 
@@ -168,7 +168,7 @@ var Application = React.createClass({
                     {this.state.Players.map((player, index) => {
                         return <Player id={index} name={player.name} key={index} score={player.score} onIncrement={this.handleIncrement} onDecrement={this.handleDecrement} />
                     })}
-                    <AddButton addPlayer={this.onAdd} removePlayer={this.onRemove} />
+                    <AddRemoveButton addPlayer={this.onAdd} removePlayer={this.onRemove} />
                     <button onClick={this.checkState}>Check state</button>
                 </div>
             </div>
