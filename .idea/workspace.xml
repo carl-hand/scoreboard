@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc22e2a9-4a52-4cf6-8a82-f859d1b1fb98" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/Player.js" afterPath="$PROJECT_DIR$/app/components/Player.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/AddRemoveButton.js" afterPath="$PROJECT_DIR$/app/components/AddRemoveButton.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/Stopwatch.js" afterPath="$PROJECT_DIR$/app/components/Stopwatch.js" />
     </list>
     <ignored path="scoreboard.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,8 +71,8 @@
           <file leaf-file-name="AddRemoveButton.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/components/AddRemoveButton.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="812">
-                  <caret line="30" column="15" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
+                <state relative-caret-position="718">
+                  <caret line="42" column="2" selection-start-line="42" selection-start-column="2" selection-end-line="42" selection-end-column="2" />
                   <folding />
                 </state>
               </provider>
@@ -79,10 +81,11 @@
           <file leaf-file-name="Stopwatch.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/components/Stopwatch.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="540">
-                  <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="26" selection-end-column="1" />
+                <state relative-caret-position="432">
+                  <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
                   <folding>
-                    <marker date="1492113549000" expanded="true" signature="446:460" ph="&lt;xml/&gt;" />
+                    <element signature="n#!!doc" expanded="true" />
+                    <marker date="1492113773000" expanded="true" signature="446:460" ph="&lt;xml/&gt;" />
                   </folding>
                 </state>
               </provider>
@@ -133,9 +136,9 @@
         <option value="$PROJECT_DIR$/app/components/Add.js" />
         <option value="$PROJECT_DIR$/app/components/Counter.js" />
         <option value="$PROJECT_DIR$/app/index.js" />
-        <option value="$PROJECT_DIR$/app/components/AddRemoveButton.js" />
-        <option value="$PROJECT_DIR$/app/components/Stopwatch.js" />
         <option value="$PROJECT_DIR$/app/components/Player.js" />
+        <option value="$PROJECT_DIR$/app/components/Stopwatch.js" />
+        <option value="$PROJECT_DIR$/app/components/AddRemoveButton.js" />
       </list>
     </option>
   </component>
@@ -646,12 +649,12 @@
       <workItem from="1492012408000" duration="1258000" />
       <workItem from="1492030577152" duration="4972000" />
       <workItem from="1492079562352" duration="3154000" />
-      <workItem from="1492111155764" duration="2466000" />
+      <workItem from="1492111155764" duration="2586000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110620000" />
+    <option name="totallyTimeSpent" value="110740000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-304" y="-1057" width="1913" height="1052" extended-state="6" />
@@ -998,14 +1001,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/Counter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="10" column="92" selection-start-line="10" selection-start-column="92" selection-end-line="10" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -1028,20 +1023,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/Counter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="10" column="92" selection-start-line="10" selection-start-column="92" selection-end-line="10" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/AddRemoveButton.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="812">
-          <caret line="30" column="15" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
+        <state relative-caret-position="718">
+          <caret line="42" column="2" selection-start-line="42" selection-start-column="2" selection-end-line="42" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/Stopwatch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="26" selection-end-column="1" />
+        <state relative-caret-position="432">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
           <folding>
-            <marker date="1492113549000" expanded="true" signature="446:460" ph="&lt;xml/&gt;" />
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1492113773000" expanded="true" signature="446:460" ph="&lt;xml/&gt;" />
           </folding>
         </state>
       </provider>

@@ -18,10 +18,10 @@ const Stopwatch =  (props) => {
     );
 };
 
-export default Stopwatch;
-
 Stopwatch.PropTypes = {
     start: React.PropTypes.func.isRequired,
     reset: React.PropTypes.func.isRequired,
     time: React.PropTypes.number.isRequired
-}
+};
+
+export default Stopwatch;

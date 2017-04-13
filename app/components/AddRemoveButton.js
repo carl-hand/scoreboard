@@ -40,4 +40,4 @@ export default class AddRemoveButton extends React.Component {
 AddRemoveButton.PropTypes = {
     addPlayer: React.PropTypes.func.isRequired,
     removePlayer: React.PropTypes.func.isRequired
-}
+};
