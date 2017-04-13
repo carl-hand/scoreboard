@@ -15,8 +15,6 @@ export default class Player extends Component {
 
     render() {
         return (
-            // wrapped in div because render function can only return one element
-            <div>
                 <div className="player">
                     <div className="player-name">
                         {this.props.name}
@@ -27,7 +25,6 @@ export default class Player extends Component {
                         <button className="counter-action increment" onClick={this.incrementScore.bind(this)}> + </button>
                     </div>
                 </div>
-            </div>
         );
     }
 }

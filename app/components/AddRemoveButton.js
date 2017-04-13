@@ -12,7 +12,6 @@ export default class AddRemoveButton extends React.Component {
         };
     }
 
-    // so I can store what the user is typing into the textbox
     handleChange(e) {
         this.setState({name: e.target.value});
     }
@@ -29,11 +28,9 @@ export default class AddRemoveButton extends React.Component {
 
     render() {
         return (
-            // look at notes for the following
-            // uncontrolled component, e.g. input but once we assign a value prop to it, it becomes a controlled component
             <div>
                 <input type="text" value={this.state.name} onChange={this.handleChange.bind(this)}/>
-                <input type="submit" value="Add Player" onClick={this.handleAdd.bind(this)}/>
+                <input type="submit" value="Add Player" onClick={this.handleAdd}/>
                 <input type="submit" value="Remove Player" onClick={this.handleRemove.bind(this)}/>
             </div>
         );
