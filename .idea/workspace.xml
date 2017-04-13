@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc22e2a9-4a52-4cf6-8a82-f859d1b1fb98" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/AddRemoveButton.js" afterPath="$PROJECT_DIR$/app/components/AddRemoveButton.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/Stopwatch.js" afterPath="$PROJECT_DIR$/app/components/Stopwatch.js" />
     </list>
     <ignored path="scoreboard.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,11 +36,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="93">
-                  <caret line="149" column="11" selection-start-line="149" selection-start-column="11" selection-end-line="149" selection-end-column="11" />
+                <state relative-caret-position="139">
+                  <caret line="153" column="19" selection-start-line="153" selection-start-column="19" selection-end-line="153" selection-end-column="19" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                     <element signature="e#47#73#0" expanded="true" />
@@ -49,11 +49,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Player.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Player.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/components/Player.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="624">
-                  <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+                <state relative-caret-position="435">
+                  <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                     <element signature="e#47#98#0" expanded="true" />
@@ -66,23 +66,23 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="AddRemoveButton.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="AddRemoveButton.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/components/AddRemoveButton.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="580">
-                  <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+                <state relative-caret-position="464">
+                  <caret line="30" column="15" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Stopwatch.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Stopwatch.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/components/Stopwatch.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="486">
-                  <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+                <state relative-caret-position="621">
+                  <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
                   <folding>
-                    <marker date="1492086954000" expanded="true" signature="446:460" ph="&lt;xml/&gt;" />
+                    <marker date="1492113549000" expanded="true" signature="446:460" ph="&lt;xml/&gt;" />
                   </folding>
                 </state>
               </provider>
@@ -131,11 +131,11 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/app/components/Add.js" />
-        <option value="$PROJECT_DIR$/app/components/Stopwatch.js" />
         <option value="$PROJECT_DIR$/app/components/Counter.js" />
         <option value="$PROJECT_DIR$/app/index.js" />
         <option value="$PROJECT_DIR$/app/components/Player.js" />
         <option value="$PROJECT_DIR$/app/components/AddRemoveButton.js" />
+        <option value="$PROJECT_DIR$/app/components/Stopwatch.js" />
       </list>
     </option>
   </component>
@@ -646,12 +646,12 @@
       <workItem from="1492012408000" duration="1258000" />
       <workItem from="1492030577152" duration="4972000" />
       <workItem from="1492079562352" duration="3154000" />
-      <workItem from="1492111155764" duration="1824000" />
+      <workItem from="1492111155764" duration="2328000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109978000" />
+    <option name="totallyTimeSpent" value="110482000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-304" y="-1057" width="1913" height="1052" extended-state="6" />
@@ -998,16 +998,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/Stopwatch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-          <folding>
-            <marker date="1492086954000" expanded="true" signature="446:460" ph="&lt;xml/&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/Counter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -1016,21 +1006,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="149" column="11" selection-start-line="149" selection-start-column="11" selection-end-line="149" selection-end-column="11" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#47#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/Player.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+        <state relative-caret-position="435">
+          <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#47#98#0" expanded="true" />
@@ -1038,11 +1017,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="153" column="19" selection-start-line="153" selection-start-column="19" selection-end-line="153" selection-end-column="19" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#47#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/AddRemoveButton.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+        <state relative-caret-position="464">
+          <caret line="30" column="15" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/Stopwatch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+          <folding>
+            <marker date="1492113549000" expanded="true" signature="446:460" ph="&lt;xml/&gt;" />
+          </folding>
         </state>
       </provider>
     </entry>
