@@ -3,14 +3,11 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import css from './app.css';
-require('./app.css');
 import Player from './components/Player'
-import Counter from './components/Counter'
 import AddRemoveButton from './components/AddRemoveButton'
 import Stopwatch from './components/Stopwatch'
+require('./app.css');
 // import update from 'immutability-helper';
-
 
 var Application = React.createClass({
     getInitialState: function () {

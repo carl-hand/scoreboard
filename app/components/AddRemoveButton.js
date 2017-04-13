@@ -12,7 +12,7 @@ export default class AddRemoveButton extends React.Component {
         };
     }
 
-    // so I can enter values into the textbox
+    // so I can store what the user is typing into the textbox
     handleChange(e) {
         this.setState({name: e.target.value});
     }
