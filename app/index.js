@@ -163,7 +163,7 @@ var Application = React.createClass({
     render: function() {
         return (
             <div>
-                <Stopwatch start={this.shouldStartGame} reset={this.resetGame} time={this.state.time}/>
+                <Stopwatch start={this.shouldStartGame} reset={this.resetGame} time={this.state.time} />
                 
                 <div className="header">
                     <h1>{this.state.title}</h1>
@@ -175,7 +175,6 @@ var Application = React.createClass({
                     })}
 
                     <AddRemoveButton addPlayer={this.onAdd} removePlayer={this.onRemove} />
-                    <button onClick={this.checkState}>Check state</button>
                 </div>
             </div>
         );

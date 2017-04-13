@@ -8,9 +8,7 @@ export default class AddRemoveButton extends React.Component {
     constructor() {
         super();
         this.state = {
-            name: "",
-            addButtonName: "Add Player",
-            removeButtonName: "Remove Player"
+            name: ""
         };
     }
 
@@ -35,8 +33,8 @@ export default class AddRemoveButton extends React.Component {
             // uncontrolled component, e.g. input but once we assign a value prop to it, it becomes a controlled component
             <div>
                 <input type="text" value={this.state.name} onChange={this.handleChange.bind(this)}/>
-                <input type="submit" value={this.state.addButtonName} onClick={this.handleAdd.bind(this)}/>
-                <input type="submit" value={this.state.removeButtonName} onClick={this.handleRemove.bind(this)}/>
+                <input type="submit" value="Add Player" onClick={this.handleAdd.bind(this)}/>
+                <input type="submit" value="Remove Player" onClick={this.handleRemove.bind(this)}/>
             </div>
         );
     }
