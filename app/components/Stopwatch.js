@@ -3,6 +3,7 @@
  */
 import React, { Component, PropTypes } from 'react'
 
+// anonymous function. same as writing function(props). Lazy way. Props references this.props
 const Stopwatch =  (props) => {
 
     return (

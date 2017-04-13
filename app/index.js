@@ -41,6 +41,7 @@ var Application = React.createClass({
 
         console.log("INCREMENT:");
         console.log("Player " + Players[index].name + " score is: " + Players[index].score);
+        
         this.state.Players.map((player) => {
             console.log(player.name + " " + player.score);
         });
@@ -48,6 +49,7 @@ var Application = React.createClass({
         if (newScore >= 5) {
             alert(Players[index].name + " is the winner");
             clearInterval(this.state.startInterval);
+            
             this.setState({
                 time: 20
             });
@@ -55,7 +57,7 @@ var Application = React.createClass({
         }
     },
 
-    handleDecrement: function (index, delta) {
+    handleDecrement: function(index, delta) {
         var Players = [...this.state.Players];
         var newScore = Players[index].score;
 
@@ -64,12 +66,13 @@ var Application = React.createClass({
             this.setState({
                 score: newScore
             });
+            
             console.log("Decrement:");
             console.log("Player score is: " + Players[index].score);
         }
     },
 
-    onAdd: function (newName) {
+    onAdd: function(newName) {
         // var Players = Object.assign([], this.state.Players, {name: newName, score: 0});
 
         // copying the contents of our state but this.state.Players will remain the same
@@ -90,7 +93,7 @@ var Application = React.createClass({
         });
     },
     
-    onRemove: function (name) {
+    onRemove: function(name) {
       var Players = [...this.state.Players];
         Players.map(function (player, index) {
 
@@ -110,12 +113,12 @@ var Application = React.createClass({
         });
     },
 
-    componentDidMount: function () {
+    componentDidMount: function() {
         this.startGame();
     },
 
     startGame: function() {
-        var intervalID = setInterval(function () {
+        var intervalID = setInterval(function() {
             var newTime = this.state.time;
             if (newTime > 0) {
                 this.setState({
@@ -128,12 +131,13 @@ var Application = React.createClass({
             }
             console.log("INTERVAL ID: " + this.state.startInterval);
         }.bind(this), 1000);
+        
         this.setState({
             startInterval: intervalID
         });
     },
 
-    shouldStartGame: function () {
+    shouldStartGame: function() {
       if (this.state.time >= 20) {
           this.startGame();
       }
@@ -142,6 +146,7 @@ var Application = React.createClass({
     resetGame: function() {
         console.log(this.state.startInterval);
         clearInterval(this.state.startInterval);
+        
         console.log(this.state.startInterval);
         this.setState({
             time: 20
@@ -168,6 +173,7 @@ var Application = React.createClass({
                     {this.state.Players.map((player, index) => {
                         return <Player id={index} name={player.name} key={index} score={player.score} onIncrement={this.handleIncrement} onDecrement={this.handleDecrement} />
                     })}
+
                     <AddRemoveButton addPlayer={this.onAdd} removePlayer={this.onRemove} />
                     <button onClick={this.checkState}>Check state</button>
                 </div>

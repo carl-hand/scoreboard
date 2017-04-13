@@ -5,10 +5,6 @@ import React, { Component, PropTypes } from 'react'
 
 export default class Player extends Component {
 
-    constructor() {
-        super();
-    }
-
     incrementScore() {
         this.props.onIncrement(this.props.id, 1);
     }
@@ -19,6 +15,7 @@ export default class Player extends Component {
 
     render() {
         return (
+            // wrapped in div because render function can only return one element
             <div>
                 <div className="player">
                     <div className="player-name">
@@ -35,10 +32,10 @@ export default class Player extends Component {
     }
 }
     
-
+// prop validation
 Player.PropTypes = {
     name: React.PropTypes.string.isRequired,
     score: React.PropTypes.number.isRequired,
     onIncrement: React.PropTypes.func.isRequired,
-    // onDecrement: React.PropTypes.func.isRequired
+    onDecrement: React.PropTypes.func.isRequired
 };
