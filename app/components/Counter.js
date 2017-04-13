@@ -8,9 +8,9 @@ const Counter = (props) => {
     return (
         <div>
             <div className="counter">
-                <button className="counter-action decrement" onClick={props.onDecrement}> - </button>
+                <button className="counter-action decrement" onClick={props.onDecrementScore}> - </button>
                 <div className="counter-score"> {props.score} </div>
-                <button className="counter-action increment" onClick={props.onIncrement}> + </button>
+                <button className="counter-action increment" onClick={props.onIncrementScore}> + </button>
             </div>
         </div>
     );

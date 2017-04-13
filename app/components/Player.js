@@ -2,8 +2,13 @@
  * Created by carl.hand on 31/03/2017.
  */
 import React, { Component, PropTypes } from 'react'
+import Counter from './Counter'
 
 export default class Player extends Component {
+
+    constructor() {
+        super();
+    }
 
     incrementScore() {
         this.props.onIncrement(this.props.id, 1);
@@ -14,16 +19,13 @@ export default class Player extends Component {
     }
 
     render() {
+        var score = this.props.score;
         return (
                 <div className="player">
                     <div className="player-name">
                         {this.props.name}
                     </div>
-                    <div className="counter">
-                        <button className="counter-action decrement" onClick={this.decrementScore.bind(this)}> - </button>
-                        <div className="counter-score"> {this.props.score} </div>
-                        <button className="counter-action increment" onClick={this.incrementScore.bind(this)}> + </button>
-                    </div>
+                    <Counter score={score} onIncrementScore={this.incrementScore.bind(this)} onDecrementScore={this.decrementScore.bind(this)} />
                 </div>
         );
     }
