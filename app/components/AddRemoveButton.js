@@ -13,17 +13,23 @@ export default class AddRemoveButton extends React.Component {
     }
 
     handleChange(e) {
-        this.setState({name: e.target.value});
+        this.setState({ 
+            name: e.target.value
+        });
     }
 
     add() {
         this.props.onAdd(this.state.name);
-        this.setState({name: ""});
+        this.setState({ 
+            name: "" 
+        });
     }
     
     remove() {
         this.props.onRemove(this.state.name);
-        this.setState({name: ""});
+        this.setState({ 
+            name: "" 
+        });
     }
 
     render() {

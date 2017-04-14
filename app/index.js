@@ -3,9 +3,9 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Player from './components/Player'
-import AddRemoveButton from './components/AddRemoveButton'
-import Stopwatch from './components/Stopwatch'
+import Player from './components/Player';
+import AddRemoveButton from './components/AddRemoveButton';
+import Stopwatch from './components/Stopwatch';
 require('./app.css');
 // import update from 'immutability-helper';
 
@@ -50,7 +50,6 @@ var Application = React.createClass({
             this.setState({
                 time: 20
             });
-
         }
     },
 
