@@ -54,14 +54,12 @@ export default class Stopwatch extends React.Component {
 
     render() {
         return (
-            <div>
-                <div className="stopwatch">
-                    <div className="stopwatch-time">
-                        {this.state.time}
-                    </div>
-                    <button onClick={this.shouldStartGame}>Start</button>
-                    <button onClick={this.resetGame}>Reset</button>
+            <div className="stopwatch">
+                <div className="stopwatch-time">
+                    {this.state.time}
                 </div>
+                <button onClick={this.shouldStartGame.bind(this)}>Start</button>
+                <button onClick={this.resetGame.bind(this)}>Reset</button>
             </div>
         );
     }
