@@ -69,7 +69,7 @@ var Application = React.createClass({
         }
     },
 
-    onAdd: function(newName) {
+    handleAdd: function(newName) {
         // var Players = Object.assign([], this.state.Players, {name: newName, score: 0});
 
         // copying the contents of our state but this.state.Players will remain the same
@@ -89,8 +89,8 @@ var Application = React.createClass({
             Players: Players
         });
     },
-    
-    onRemove: function(name) {
+
+    handleRemove: function(name) {
       var Players = [...this.state.Players];
         Players.map(function (player, index) {
 
@@ -131,7 +131,7 @@ var Application = React.createClass({
                         return <Player id={index} name={player.name} key={index} score={player.score} onIncrement={this.handleIncrement} onDecrement={this.handleDecrement} />
                     })}
 
-                    <AddRemoveButton addPlayer={this.onAdd} removePlayer={this.onRemove} />
+                    <AddRemoveButton onAdd={this.handleAdd} onRemove={this.handleRemove} />
                 </div>
             </div>
         );

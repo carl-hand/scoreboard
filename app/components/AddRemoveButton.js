@@ -16,13 +16,13 @@ export default class AddRemoveButton extends React.Component {
         this.setState({name: e.target.value});
     }
 
-    handleAdd() {
-        this.props.addPlayer(this.state.name);
+    add() {
+        this.props.onAdd(this.state.name);
         this.setState({name: ""});
     }
     
-    handleRemove() {
-        this.props.removePlayer(this.state.name);
+    remove() {
+        this.props.onRemove(this.state.name);
         this.setState({name: ""});
     }
 
@@ -30,8 +30,8 @@ export default class AddRemoveButton extends React.Component {
         return (
             <div>
                 <input type="text" value={this.state.name} onChange={this.handleChange.bind(this)}/>
-                <input type="submit" value="Add Player" onClick={this.handleAdd.bind(this)}/>
-                <input type="submit" value="Remove Player" onClick={this.handleRemove.bind(this)}/>
+                <input type="submit" value="Add Player" onClick={this.add.bind(this)}/>
+                <input type="submit" value="Remove Player" onClick={this.remove.bind(this)}/>
             </div>
         );
     }
