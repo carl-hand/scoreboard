@@ -28,6 +28,15 @@ var Application = React.createClass({
       });
     },
 
+    handleGameOver: function() {
+        if (this.state.gameOver) {
+            this.setState({
+                gameTime: 0
+            });
+            console.log("GAME OVER");
+        }
+    },
+    
     handleIncrement: function(index, delta) {
         var Players = [...this.state.Players];
         var newScore = Players[index].score += delta;
@@ -45,10 +54,10 @@ var Application = React.createClass({
 
         if (newScore >= 5) {
             alert(Players[index].name + " is the winner");
-            clearInterval(this.state.startInterval);
 
             this.setState({
-                time: 20
+                time: 20,
+                gameOver: true
             });
 
             Players.map((player) => {
@@ -123,7 +132,7 @@ var Application = React.createClass({
     render: function() {
         return (
             <div>
-                <Stopwatch />
+                <Stopwatch time={this.state.time} gameOver={this.handleGameOver} />
                 
                 <div className="header">
                     <h1>{this.state.title}</h1>

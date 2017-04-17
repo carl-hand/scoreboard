@@ -8,7 +8,7 @@ export default class Stopwatch extends React.Component {
     constructor() {
         super();
         this.state = {
-            time: 20,
+            gameTime: 20,
             startInterval: 0
         };
     }
@@ -16,12 +16,17 @@ export default class Stopwatch extends React.Component {
         this.startGame();
     }
 
+    game() {
+        this.props.gameOver;
+    }
+
     startGame() {
         var intervalID = setInterval(function() {
-            var newTime = this.state.time;
-            if (newTime > 0) {
+            var newTime = this.state.gameTime;
+            this.game();
+                if (newTime > 0) {
                 this.setState({
-                    time: newTime - 1
+                    gameTime: newTime - 1
                 });
             }
             else {
@@ -37,7 +42,7 @@ export default class Stopwatch extends React.Component {
     }
 
     shouldStartGame() {
-        if (this.state.time >= 20) {
+        if (this.state.gameTime >= 20) {
             this.startGame();
         }
     }
@@ -56,7 +61,7 @@ export default class Stopwatch extends React.Component {
         return (
             <div className="stopwatch">
                 <div className="stopwatch-time">
-                    {this.state.time}
+                    {this.state.gameTime}
                 </div>
                 <button onClick={this.shouldStartGame.bind(this)}>Start</button>
                 <button onClick={this.resetGame.bind(this)}>Reset</button>
