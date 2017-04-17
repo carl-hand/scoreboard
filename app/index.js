@@ -46,9 +46,13 @@ var Application = React.createClass({
         if (newScore >= 5) {
             alert(Players[index].name + " is the winner");
             clearInterval(this.state.startInterval);
-            
+
             this.setState({
                 time: 20
+            });
+
+            Players.map((player) => {
+                player.score = 0;
             });
         }
     },
