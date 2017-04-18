@@ -8,5 +8,9 @@ import { createStore } from 'redux';
 import PlayerReducer from './reducers/player';
 import Scoreboard from './components/Scoreboard';
 
+const store = createStore(
+    PlayerReducer
+);
+
 render(<Scoreboard />,
 document.getElementById("app"));
