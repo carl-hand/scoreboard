@@ -49,6 +49,7 @@ var Application = React.createClass({
             Players.map((player) => {
                 player.score = 0;
             });
+            this.resetGame();
         }
     },
 
