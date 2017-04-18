@@ -12,5 +12,9 @@ const store = createStore(
     PlayerReducer
 );
 
-render(<Scoreboard />,
-document.getElementById("app"));
+render(
+    <Provider store={store}>
+        <Scoreboard />
+    </Provider>,
+    document.getElementById("app")
+);
