@@ -27,15 +27,6 @@ var Application = React.createClass({
           startInterval: ""
       });
     },
-
-    handleGameOver: function() {
-        if (this.state.gameOver) {
-            this.setState({
-                gameTime: 0
-            });
-            console.log("GAME OVER");
-        }
-    },
     
     handleIncrement: function(index, delta) {
         var Players = [...this.state.Players];
@@ -54,12 +45,7 @@ var Application = React.createClass({
 
         if (newScore >= 5) {
             alert(Players[index].name + " is the winner");
-
-            this.setState({
-                time: 20,
-                gameOver: true
-            });
-
+            
             Players.map((player) => {
                 player.score = 0;
             });
@@ -122,17 +108,50 @@ var Application = React.createClass({
         });
     },
 
-    checkState: function() {
-        console.log("CHECKING STATE...");
-        this.state.Players.map((player) => {
-            console.log(player.name + " " + player.score);
+    startGame() {
+        var intervalID = setInterval(function() {
+            var newTime = this.state.time;
+            if (newTime > 0) {
+                this.setState({
+                    time: newTime - 1
+                });
+            }
+            else {
+                alert("GAME OVER");
+                clearInterval(intervalID);
+            }
+            console.log("INTERVAL ID: " + this.state.startInterval);
+        }.bind(this), 1000);
+
+        this.setState({
+            startInterval: intervalID
         });
     },
 
+    shouldStartGame() {
+        if (this.state.time >= 20) {
+            this.startGame();
+        }
+    },
+
+    resetGame() {
+        console.log(this.state.startInterval);
+        clearInterval(this.state.startInterval);
+
+        console.log(this.state.startInterval);
+        this.setState({
+            time: 20
+        });
+    },
+
+    componentDidMount() {
+        this.startGame();
+    },
+    
     render: function() {
         return (
             <div>
-                <Stopwatch time={this.state.time} gameOver={this.handleGameOver} />
+                <Stopwatch time={this.state.time} shouldStart={this.shouldStartGame} reset={this.resetGame} />
                 
                 <div className="header">
                     <h1>{this.state.title}</h1>
