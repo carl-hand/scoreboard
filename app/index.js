@@ -7,7 +7,6 @@ import Player from './components/Player';
 import AddRemoveButton from './components/AddRemoveButton';
 import Stopwatch from './components/Stopwatch';
 require('./app.css');
-// import update from 'immutability-helper';
 
 var Application = React.createClass({
     getInitialState: function () {
@@ -69,8 +68,6 @@ var Application = React.createClass({
     },
 
     handleAdd: function(newName) {
-        // var Players = Object.assign([], this.state.Players, {name: newName, score: 0});
-
         // copying the contents of our state but this.state.Players will remain the same
         var Players = [...this.state.Players];
 

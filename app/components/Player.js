@@ -31,7 +31,6 @@ export default class Player extends Component {
     }
 }
     
-// prop validation
 Player.PropTypes = {
     id: React.PropTypes.string.isRequired,
     name: React.PropTypes.string.isRequired,
