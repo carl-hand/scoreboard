@@ -2,6 +2,7 @@
  * Created by carl.hand on 18/04/2017.
  */
 import React from 'react';
+import { connect } from 'react-redux';
 import Player from './Player';
 import AddRemoveButton from './AddRemoveButton';
 import Stopwatch from './Stopwatch';
@@ -178,4 +179,10 @@ var Scoreboard = React.createClass({
     }
 });
 
-export default Scoreboard;
+const mapStateToProps = state => (
+    {
+        players: state
+    }
+);
+
+export default connect (mapStateToProps)(Scoreboard);
