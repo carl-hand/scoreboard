@@ -145,6 +145,10 @@ var Scoreboard = React.createClass({
         this.startGame();
     },
 
+    componentWillUnmount() {
+        clearInterval(this.state.startInterval);
+    },
+
     render: function() {
         return (
             <div>
