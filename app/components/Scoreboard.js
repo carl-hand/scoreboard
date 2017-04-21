@@ -5,6 +5,8 @@ import React from 'react';
 import Player from './Player';
 import AddRemoveButton from './AddRemoveButton';
 import Stopwatch from './Stopwatch';
+import * as PlayerActionCreators from "../actions/player";
+import bindActionCreators from "../../node_modules/redux/es/bindActionCreators";
 require('../app.css');
 
 var Scoreboard = React.createClass({
@@ -150,6 +152,12 @@ var Scoreboard = React.createClass({
     },
 
     render: function() {
+        const { dispatch, players } = this.props;
+        const addPlayer = bindActionCreators(PlayerActionCreators.add, dispatch);
+        // const removePlayer = bindActionCreators(PlayerActionCreators.remove, dispatch);
+        // const incrementScore = bindActionCreators(PlayerActionCreators.increment, dispatch);
+
+
         return (
             <div>
                 <Stopwatch time={this.state.time} shouldStart={this.shouldStartGame} reset={this.resetGame} />
@@ -163,7 +171,7 @@ var Scoreboard = React.createClass({
                         return <Player id={index} name={player.name} key={index} score={player.score} onIncrement={this.handleIncrement} onDecrement={this.handleDecrement} />
                     })}
 
-                    <AddRemoveButton onAdd={this.handleAdd} onRemove={this.handleRemove} />
+                    <AddRemoveButton onAdd={addPlayer} onRemove={this.handleRemove} />
                 </div>
             </div>
         );
