@@ -1,0 +1,12 @@
+# Ignore OS/filesystem metadata files
+.DS_Store
+
+# Ignore IDE metadata files
+.idea
+*.iml
+.vscode/
+
+# Ignore npm directories and related log files
+node_modules
+npm-debug.log
+yarn-error.log
