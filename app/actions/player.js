@@ -9,3 +9,10 @@ export const add = name => {
     name
   };
 };
+
+export const remove = index => {
+  return {
+    type: PlayerActionTypes.REMOVE,
+    index
+  };
+};

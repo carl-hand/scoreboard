@@ -15,6 +15,8 @@ const initialState = [
 ];
 
 export default function Player(state = initialState, action) {
+  // for each case, the action can access the argument we have specified for the
+  // corresponding method in our action creator, e.g. ADD has name and REMOVE has index
   switch (action.type) {
     case PlayerActionTypes.ADD:
       return [
@@ -23,6 +25,11 @@ export default function Player(state = initialState, action) {
           name: action.name,
           score: 0
         }
+      ];
+    case PlayerActionTypes.REMOVE:
+      return[
+        ...state.slice(0, action.index),
+        ...state.slice(action.index + 1)
       ];
     default:
       return state;
