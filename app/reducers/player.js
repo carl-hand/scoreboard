@@ -28,18 +28,18 @@ export default function Player(state = initialState, action) {
     ];
   }
   else if (action.type === PlayerActionTypes.REMOVE) {
-    var add = false;
+    var shouldAddPlayer = false;
     const Players = [...state];
     Players.map((player, index) => {
       if (action.name === player.name) {
         action.index = index;
-        add = true;
+        shouldAddPlayer = true;
       }
       else {
         console.log(action.name + " does not exist");
       }
     });
-    if (add) {
+    if (shouldAddPlayer) {
       return [
         ...state.slice(0, action.index),
         ...state.slice(action.index + 1)
