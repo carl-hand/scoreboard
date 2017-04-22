@@ -16,3 +16,10 @@ export const remove = index => {
     index
   };
 };
+
+export const check = name => {
+  return {
+    type: PlayerActionTypes.CHECK,
+    name
+  };
+};

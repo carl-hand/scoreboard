@@ -152,6 +152,7 @@ class Scoreboard extends Component {
     const { dispatch, players } = this.props;
     const addPlayer = bindActionCreators(PlayerActionCreators.add, dispatch);
     const removePlayer = bindActionCreators(PlayerActionCreators.remove, dispatch);
+    const check = bindActionCreators(PlayerActionCreators.check, dispatch);
     // const incrementScore = bindActionCreators(PlayerActionCreators.increment, dispatch);
 
     const playerComponents = players.map((player, index) => {
@@ -174,6 +175,7 @@ class Scoreboard extends Component {
         <div className='players'>
           { playerComponents }
           <AddRemoveButton onAdd={addPlayer} onRemove={removePlayer}/>
+          <button onClick={check}>Check state</button>
         </div>
       </div>
     );
