@@ -3,11 +3,11 @@
  */
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import Player from './Player';
 import AddRemoveButton from './AddRemoveButton';
 import Stopwatch from './Stopwatch';
 import * as PlayerActionCreators from '../actions/player';
-import bindActionCreators from '../../node_modules/redux/es/bindActionCreators';
 require('../app.css');
 
 class Scoreboard extends Component {
