@@ -18,6 +18,16 @@ export const remove = (name, index) => {
   };
 };
 
+// the arguments we specify here are the ones we will provide in our callback method,
+// in Player.js within incrementScore(), to this.props.onIncrement(index, delta)
+export const increment = (index, delta) => {
+  return {
+    type: PlayerActionTypes.INCREMENT,
+    index,
+    delta
+  };
+};
+
 export const check = name => {
   return {
     type: PlayerActionTypes.CHECK,
