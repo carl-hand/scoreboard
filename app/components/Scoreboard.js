@@ -154,6 +154,14 @@ class Scoreboard extends Component {
     // const removePlayer = bindActionCreators(PlayerActionCreators.remove, dispatch);
     // const incrementScore = bindActionCreators(PlayerActionCreators.increment, dispatch);
 
+    const playerComponents = players.map((player, index) => {
+      return <Player
+        id={index}
+        name={player.name}
+        score={player.score}
+        key={index}
+        />
+    });
 
     return (
       <div>
@@ -164,11 +172,7 @@ class Scoreboard extends Component {
         </div>
 
         <div className='players'>
-          {this.state.Players.map((player, index) => {
-            return <Player id={index} name={player.name} key={index} score={player.score}
-                           onIncrement={this.handleIncrement} onDecrement={this.handleDecrement}/>
-          })}
-
+          { playerComponents }
           <AddRemoveButton onAdd={addPlayer} onRemove={this.handleRemove}/>
         </div>
       </div>
