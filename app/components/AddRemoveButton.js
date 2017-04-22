@@ -1,14 +1,14 @@
 /**
  * Created by carl.hand on 31/03/2017.
  */
-import React from "react";
+import React from 'react';
 
 export default class AddRemoveButton extends React.Component {
 
   constructor() {
     super();
     this.state = {
-      name: ""
+      name: ''
     };
   }
 
@@ -21,23 +21,23 @@ export default class AddRemoveButton extends React.Component {
   add() {
     this.props.onAdd(this.state.name);
     this.setState({
-      name: ""
+      name: ''
     });
   }
 
   remove() {
     this.props.onRemove(this.state.name);
     this.setState({
-      name: ""
+      name: ''
     });
   }
 
   render() {
     return (
       <div>
-        <input type="text" value={this.state.name} onChange={this.handleChange.bind(this)}/>
-        <input type="submit" value="Add Player" onClick={this.add.bind(this)}/>
-        <input type="submit" value="Remove Player" onClick={this.remove.bind(this)}/>
+        <input type='text' value={this.state.name} onChange={this.handleChange.bind(this)}/>
+        <input type='submit' value='Add Player' onClick={this.add.bind(this)}/>
+        <input type='submit' value='Remove Player' onClick={this.remove.bind(this)}/>
       </div>
     );
   }

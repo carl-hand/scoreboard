@@ -1,8 +1,8 @@
 /**
  * Created by carl.hand on 31/03/2017.
  */
-import React, { Component, PropTypes } from "react";
-import Counter from "./Counter";
+import React, { Component, PropTypes } from 'react';
+import Counter from './Counter';
 
 export default class Player extends Component {
 
@@ -21,8 +21,8 @@ export default class Player extends Component {
   render() {
     var score = this.props.score;
     return (
-      <div className="player">
-        <div className="player-name">
+      <div className='player'>
+        <div className='player-name'>
           {this.props.name}
         </div>
         <Counter score={score} onIncrementScore={this.incrementScore.bind(this)}

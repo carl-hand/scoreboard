@@ -1,15 +1,15 @@
 /**
  * Created by carl.hand on 18/04/2017.
  */
-import * as PlayerActionTypes from "../actiontypes/player";
+import * as PlayerActionTypes from '../actiontypes/player';
 
 const initialState = [
   {
-    name: "Carl",
+    name: 'Carl',
     score: 0,
   },
   {
-    name: "Lee",
+    name: 'Lee',
     score: 0,
   },
 ];

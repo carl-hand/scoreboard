@@ -1,13 +1,13 @@
 /**
  * Created by carl.hand on 03/04/2017.
  */
-import React, { Component, PropTypes } from "react";
+import React, { Component, PropTypes } from 'react';
 
 const Stopwatch = (props) => {
 
   return (
-    <div className="stopwatch">
-      <div className="stopwatch-time">
+    <div className='stopwatch'>
+      <div className='stopwatch-time'>
         {props.time}
       </div>
       <button onClick={props.shouldStart}>Start</button>
