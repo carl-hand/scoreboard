@@ -26,31 +26,35 @@ export default function Player(state = initialState, action) {
         score: 0
       }
     ];
-  } 
+  }
   else if (action.type === PlayerActionTypes.REMOVE) {
     var add = false;
     const Players = [...state];
     Players.map((player, index) => {
       if (action.name === player.name) {
-        console.log("action.name: " + action.name);
-        console.log("NAME: " + player.name);
         action.index = index;
         add = true;
-      } 
+      }
       else {
         console.log(action.name + " does not exist");
-        add = false;
       }
     });
-    return [
-      ...state.slice(0, action.index),
-      ...state.slice(action.index + 1)
-    ];
+    if (add) {
+      return [
+        ...state.slice(0, action.index),
+        ...state.slice(action.index + 1)
+      ];
+    }
+    else {
+      return [
+        ...state
+      ];
+    }
   }
   else if (action.type === PlayerActionTypes.CHECK) {
     console.log(...state);
     return state;
-  } 
+  }
   else {
     return state;
   }
