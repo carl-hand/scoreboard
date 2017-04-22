@@ -1,7 +1,7 @@
 /**
  * Created by carl.hand on 18/04/2017.
  */
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Player from './Player';
 import AddRemoveButton from './AddRemoveButton';
@@ -10,8 +10,8 @@ import * as PlayerActionCreators from '../actions/player';
 import bindActionCreators from '../../node_modules/redux/es/bindActionCreators';
 require('../app.css');
 
-var Scoreboard = React.createClass({
-  getInitialState: function () {
+class Scoreboard extends Component {
+  getInitialState() {
     return ({
       Players: [
         {
@@ -27,9 +27,9 @@ var Scoreboard = React.createClass({
       time: 20,
       startInterval: ''
     });
-  },
+  }
 
-  handleIncrement: function (index, delta) {
+  handleIncrement(index, delta) {
     var Players = [...this.state.Players];
     var newScore = Players[index].score += delta;
 
@@ -52,9 +52,9 @@ var Scoreboard = React.createClass({
       });
       this.resetGame();
     }
-  },
+  }
 
-  handleDecrement: function (index, delta) {
+  handleDecrement(index, delta) {
     var Players = [...this.state.Players];
     var newScore = Players[index].score;
 
@@ -67,9 +67,9 @@ var Scoreboard = React.createClass({
       console.log('Decrement:');
       console.log('Player score is: ' + Players[index].score);
     }
-  },
+  }
 
-  handleAdd: function (newName) {
+  handleAdd(newName) {
     // copying the contents of our state but this.state.Players will remain the same
     var Players = [...this.state.Players];
 
@@ -86,9 +86,9 @@ var Scoreboard = React.createClass({
     this.setState({
       Players: Players
     });
-  },
+  }
 
-  handleRemove: function (name) {
+  handleRemove(name) {
     var Players = [...this.state.Players];
     Players.map(function (player, index) {
 
@@ -106,7 +106,7 @@ var Scoreboard = React.createClass({
     this.setState({
       Players: Players
     });
-  },
+  }
 
   startGame() {
     var intervalID = setInterval(function () {
@@ -126,13 +126,13 @@ var Scoreboard = React.createClass({
     this.setState({
       startInterval: intervalID
     });
-  },
+  }
 
   shouldStartGame() {
     if (this.state.time >= 20) {
       this.startGame();
     }
-  },
+  }
 
   resetGame() {
     console.log(this.state.startInterval);
@@ -142,17 +142,17 @@ var Scoreboard = React.createClass({
     this.setState({
       time: 20
     });
-  },
+  }
 
   componentDidMount() {
     this.startGame();
-  },
+  }
 
   componentWillUnmount() {
     clearInterval(this.state.startInterval);
-  },
+  }
 
-  render: function () {
+  render(){
     const { dispatch, players } = this.props;
     const addPlayer = bindActionCreators(PlayerActionCreators.add, dispatch);
     // const removePlayer = bindActionCreators(PlayerActionCreators.remove, dispatch);
@@ -178,7 +178,7 @@ var Scoreboard = React.createClass({
       </div>
     );
   }
-});
+}
 
 const mapStateToProps = state => (
   {
