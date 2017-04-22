@@ -11,22 +11,18 @@ import * as PlayerActionCreators from '../actions/player';
 require('../app.css');
 
 class Scoreboard extends Component {
-  getInitialState() {
-    return ({
-      Players: [
-        {
-          name: 'Carl',
-          score: 0,
-        },
-        {
-          name: 'Lee',
-          score: 0,
-        }
-      ],
+
+  static PropTypes: {
+    players: PropTypes.array.isRequired
+  };
+
+  constructor() {
+    super();
+    this.state = {
       title: 'Scoreboard',
       time: 20,
       startInterval: ''
-    });
+    }
   }
 
   handleIncrement(index, delta) {
