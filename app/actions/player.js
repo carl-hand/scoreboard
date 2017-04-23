@@ -28,6 +28,13 @@ export const increment = (index, delta) => {
   };
 };
 
+export const decrement = (index) => {
+  return {
+    type: PlayerActionTypes.DECREMENT,
+    index
+  }
+};
+
 export const check = name => {
   return {
     type: PlayerActionTypes.CHECK,

@@ -152,8 +152,9 @@ class Scoreboard extends Component {
     const { dispatch, players } = this.props;
     const addPlayer = bindActionCreators(PlayerActionCreators.add, dispatch);
     const removePlayer = bindActionCreators(PlayerActionCreators.remove, dispatch);
-    const check = bindActionCreators(PlayerActionCreators.check, dispatch);
     const incrementScore = bindActionCreators(PlayerActionCreators.increment, dispatch);
+    const decrementScore = bindActionCreators(PlayerActionCreators.decrement, dispatch);
+    const check = bindActionCreators(PlayerActionCreators.check, dispatch);
 
     const playerComponents = players.map((player, index) => {
       return <Player
@@ -162,6 +163,7 @@ class Scoreboard extends Component {
         score={player.score}
         key={index}
         onIncrement={incrementScore}
+        onDecrement={decrementScore}
         />
     });
 
