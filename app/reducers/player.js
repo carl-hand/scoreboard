@@ -65,6 +65,18 @@ export default function Player(state = initialState, action) {
       ...state
     ];
   }
+  else if (action.type = PlayerActionTypes.DECREMENT) {
+    const Players = [...state];
+    var index = action.index;
+    // if (index != undefined) {
+    console.log("DECREMENT: " + Players[index].score);
+    Players[index].score = 1;
+    // }
+    // should this be Players instead???
+    return [
+      ...state
+    ];
+  }
   else if (actionType === PlayerActionTypes.CHECK) {
     console.log(...state);
     return state;
