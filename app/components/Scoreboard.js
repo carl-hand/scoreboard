@@ -141,7 +141,7 @@ class Scoreboard extends Component {
   }
 
   componentDidMount() {
-    this.startGame();
+    // this.startGame();
   }
 
   componentWillUnmount() {

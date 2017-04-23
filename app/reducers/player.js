@@ -52,20 +52,15 @@ export default function Player(state = initialState, action) {
     }
   }
   else if (action.type = PlayerActionTypes.INCREMENT) {
-    var shouldIncrement = false;
     const Players = [...state];
-    console.log("SCORE: " + action.delta);
-    Players.map(player => {
-      if (player.index === action.index) {
-        shouldIncrement = true;
-        action.score++;
-      }
-    });
-    if (shouldIncrement) {
-      return [
-        ...state
-      ];
+    var index = action.index;
+    if (index != undefined) {
+      console.log("index hit is: " + index);
+      Players[index].score += action.delta;
     }
+    return [
+      ...state
+    ];
   }
   else if (action.type === PlayerActionTypes.CHECK) {
     console.log(...state);

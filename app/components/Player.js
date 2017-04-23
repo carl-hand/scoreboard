@@ -11,11 +11,11 @@ export default class Player extends Component {
   }
 
   incrementScore() {
-    this.props.onIncrement(this.props.id, 1);
+    this.props.onIncrement(this.props.index, 1);
   }
 
   decrementScore() {
-    this.props.onDecrement(this.props.id, 1);
+    this.props.onDecrement(this.props.index, 1);
   }
 
   render() {
