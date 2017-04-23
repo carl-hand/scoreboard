@@ -18,7 +18,8 @@ const initialState = [
 export default function Player(state = initialState, action) {
   // for each case, the action can access the argument we have specified for the
   // corresponding method in our action creator, e.g. ADD has name and REMOVE has index
-  if (action.type === PlayerActionTypes.ADD) {
+  var actionType = action.type;
+  if (actionType === PlayerActionTypes.ADD) {
     return [
       ...state,
       {
@@ -27,7 +28,7 @@ export default function Player(state = initialState, action) {
       }
     ];
   }
-  else if (action.type === PlayerActionTypes.REMOVE) {
+  else if (actionType === PlayerActionTypes.REMOVE) {
     var shouldAddPlayer = false;
     const Players = [...state];
     Players.map((player, index) => {
@@ -51,7 +52,7 @@ export default function Player(state = initialState, action) {
       ];
     }
   }
-  else if (action.type = PlayerActionTypes.INCREMENT) {
+  else if (actionType = PlayerActionTypes.INCREMENT) {
     const Players = [...state];
     var index = action.index;
     if (index != undefined) {
@@ -62,7 +63,7 @@ export default function Player(state = initialState, action) {
       ...state
     ];
   }
-  else if (action.type === PlayerActionTypes.CHECK) {
+  else if (actionType === PlayerActionTypes.CHECK) {
     console.log(...state);
     return state;
   }
