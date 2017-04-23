@@ -19,11 +19,12 @@ export default function Player(state = initialState, action) {
   // for each case, the action can access the argument we have specified for the
   // corresponding method in our action creator, e.g. ADD has name and REMOVE has index
   var actionType = action.type;
+  var actionName = action.name;
   if (actionType === PlayerActionTypes.ADD) {
     return [
       ...state,
       {
-        name: action.name,
+        name: actionName,
         score: 0
       }
     ];
@@ -32,12 +33,12 @@ export default function Player(state = initialState, action) {
     var shouldAddPlayer = false;
     const Players = [...state];
     Players.map((player, index) => {
-      if (action.name === player.name) {
+      if (actionName === player.name) {
         action.index = index;
         shouldAddPlayer = true;
       }
       else {
-        console.log(action.name + " does not exist");
+        console.log(actionName + " does not exist");
       }
     });
     if (shouldAddPlayer) {
