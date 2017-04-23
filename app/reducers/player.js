@@ -20,6 +20,7 @@ export default function Player(state = initialState, action) {
   // corresponding method in our action creator, e.g. ADD has name and REMOVE has index
   var actionType = action.type;
   var actionName = action.name;
+  var actionIndex = action.index;
   if (actionType === PlayerActionTypes.ADD) {
     return [
       ...state,
@@ -34,7 +35,7 @@ export default function Player(state = initialState, action) {
     const Players = [...state];
     Players.map((player, index) => {
       if (actionName === player.name) {
-        action.index = index;
+        actionIndex = index;
         shouldAddPlayer = true;
       }
       else {
@@ -43,8 +44,8 @@ export default function Player(state = initialState, action) {
     });
     if (shouldAddPlayer) {
       return [
-        ...state.slice(0, action.index),
-        ...state.slice(action.index + 1)
+        ...state.slice(0, actionIndex),
+        ...state.slice(actionIndex + 1)
       ];
     }
     else {
@@ -55,7 +56,7 @@ export default function Player(state = initialState, action) {
   }
   else if (actionType = PlayerActionTypes.INCREMENT) {
     const Players = [...state];
-    var index = action.index;
+    var index = actionIndex;
     if (index != undefined) {
       console.log("index hit is: " + index);
       Players[index].score += action.delta;
