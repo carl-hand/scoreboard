@@ -56,22 +56,20 @@ export default function Player(state = initialState, action) {
   }
   else if (actionType = PlayerActionTypes.INCREMENT) {
     const Players = [...state];
-    var index = actionIndex;
-    if (index != undefined) {
-      console.log("index hit is: " + index);
-      Players[index].score += action.delta;
+    if (actionIndex != undefined) {
+      console.log("index hit is: " + actionIndex);
+      Players[actionIndex].score += action.delta;
     }
     return [
       ...state
     ];
   }
-  else if (action.type = PlayerActionTypes.DECREMENT) {
+  else if (actionType = PlayerActionTypes.DECREMENT) {
     const Players = [...state];
-    var index = action.index;
-    // if (index != undefined) {
-    console.log("DECREMENT: " + Players[index].score);
-    Players[index].score = 1;
-    // }
+    if (actionIndex != undefined) {
+    console.log("DECREMENT: " + Players[actionIndex].score);
+    Players[actionIndex].score -= action.delta;
+    }
     // should this be Players instead???
     return [
       ...state

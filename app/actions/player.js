@@ -28,10 +28,11 @@ export const increment = (index, delta) => {
   };
 };
 
-export const decrement = (index) => {
+export const decrement = (index, delta) => {
   return {
     type: PlayerActionTypes.DECREMENT,
-    index
+    index,
+    delta
   }
 };
 
