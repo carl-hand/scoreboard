@@ -22,7 +22,7 @@ class Scoreboard extends Component {
       title: 'Scoreboard',
       time: 20,
       startInterval: ''
-    }
+    };
   }
 
   handleIncrement(index, delta) {
@@ -148,7 +148,7 @@ class Scoreboard extends Component {
     clearInterval(this.state.startInterval);
   }
 
-  render(){
+  render() {
     const { dispatch, players } = this.props;
     const addPlayer = bindActionCreators(PlayerActionCreators.add, dispatch);
     const removePlayer = bindActionCreators(PlayerActionCreators.remove, dispatch);
@@ -164,7 +164,7 @@ class Scoreboard extends Component {
         key={index}
         onIncrement={incrementScore}
         onDecrement={decrementScore}
-        />
+      />;
     });
 
     return (

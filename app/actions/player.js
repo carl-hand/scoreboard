@@ -33,7 +33,7 @@ export const decrement = (index, delta) => {
     type: PlayerActionTypes.DECREMENT,
     index,
     delta
-  }
+  };
 };
 
 export const check = name => {

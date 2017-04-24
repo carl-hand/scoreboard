@@ -3,4 +3,4 @@
  */
 import React from 'react';
 
-var App
+var App;

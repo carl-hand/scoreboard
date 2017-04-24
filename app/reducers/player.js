@@ -39,7 +39,7 @@ export default function Player(state = initialState, action) {
         shouldAddPlayer = true;
       }
       else {
-        console.log(actionName + " does not exist");
+        console.log(actionName + ' does not exist');
       }
     });
     if (shouldAddPlayer) {
@@ -57,7 +57,7 @@ export default function Player(state = initialState, action) {
   else if (actionType = PlayerActionTypes.INCREMENT) {
     const Players = [...state];
     if (actionIndex != undefined) {
-      console.log("index hit is: " + actionIndex);
+      console.log('index hit is: ' + actionIndex);
       Players[actionIndex].score += action.delta;
     }
     return [
@@ -67,8 +67,8 @@ export default function Player(state = initialState, action) {
   else if (actionType = PlayerActionTypes.DECREMENT) {
     const Players = [...state];
     if (actionIndex != undefined) {
-    console.log("DECREMENT: " + Players[actionIndex].score);
-    Players[actionIndex].score -= action.delta;
+      console.log('DECREMENT: ' + Players[actionIndex].score);
+      Players[actionIndex].score -= action.delta;
     }
     // should this be Players instead???
     return [
